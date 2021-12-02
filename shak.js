@@ -59,11 +59,11 @@ $("#read-only").submit(function () {
 $("#append-only").submit(function () {
   event.preventDefault();
   
-  let decryptOne = decryptBase(og_base.value, user_key.value);
+  const decrypt_1 = decryptBase(og_base.value, user_key.value);
   let space = `
   `;
   
-  new_shak.innerText = LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decryptOne + space + append_base.value));
+  new_shak.innerText = LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decrypt_1 + space + append_base.value));
 });
 
 $("#create-shak").submit(function () {
