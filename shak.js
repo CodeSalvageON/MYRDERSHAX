@@ -2,6 +2,8 @@ const user_key = document.getElementById("a-key");
 const read_base = document.getElementById("read-base");
 const append_base = document.getElementById("append-base");
 const new_shak = document.getElementById("new-shak");
+const shak_name = document.getElementById("shak-name");
+const key_name = document.getElementById("key-name");
 
 function encryptBase (base, key) {
   let preset_key = key;
@@ -60,4 +62,13 @@ $("append-only").submit(function () {
   `;
   
   new_shak.innerText = LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decryptOne + space + append_base.value));
+});
+
+$("#create-shak").submit(function () {
+  event.preventDefault();
+  
+  let space = `
+  `;
+  
+  new_shak.innerText = encryptBase(shak_name.value + space, "");
 });
