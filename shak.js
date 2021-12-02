@@ -56,7 +56,7 @@ $("#read-only").submit(function () {
   done_read.innerText = decryptBase(read_base.value, user_key.value);
 });
 
-$("append-only").submit(function () {
+$("#append-only").submit(function () {
   event.preventDefault();
   
   let decryptOne = decryptBase(og_base.value, user_key.value);
