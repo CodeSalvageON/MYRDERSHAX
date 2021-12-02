@@ -4,6 +4,7 @@ const append_base = document.getElementById("append-base");
 const new_shak = document.getElementById("new-shak");
 const shak_name = document.getElementById("shak-name");
 const key_name = document.getElementById("key-name");
+const og_base = document.getElementById("og-base");
 
 function encryptBase (base, key) {
   let preset_key = key;
@@ -57,7 +58,7 @@ $("#read-only").submit(function () {
 $("append-only").submit(function () {
   event.preventDefault();
   
-  let decryptOne = decryptBase(append_base.value, user_key.value);
+  let decryptOne = decryptBase(og_base.value, user_key.value);
   let space = `
   `;
   
