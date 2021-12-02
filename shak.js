@@ -5,6 +5,7 @@ const new_shak = document.getElementById("new-shak");
 const shak_name = document.getElementById("shak-name");
 const key_name = document.getElementById("key-name");
 const og_base = document.getElementById("og-base");
+const done_read = document.getElementById("done-read");
 
 function encryptBase (base, key) {
   let preset_key = key;
@@ -52,7 +53,7 @@ function decryptBase (base, key) {
 $("#read-only").submit(function () {
   event.preventDefault();
   
-  new_shak.innerText = decryptBase(read_base.value, user_key.value);
+  done_read.innerText = decryptBase(read_base.value, user_key.value);
 });
 
 $("append-only").submit(function () {
