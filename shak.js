@@ -44,7 +44,7 @@ function decryptBase (base, key) {
   
   let decrypt_1 = LZString.decompress(preset_base);
   let decrypt_2 = LZString.compress(preset_key) + LZString.compress("--key--");
-  let decrypt_3 = decrypt_1.split(decrypt_2);
+  let decrypt_3 = decrypt_1.split("--key--");
   let decrypt_4 = decrypt_3[1];
   
   return LZString.decompress(decrypt_4);
