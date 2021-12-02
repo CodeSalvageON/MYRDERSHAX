@@ -55,5 +55,9 @@ $("#read-only").submit(function () {
 $("append-only").submit(function () {
   event.preventDefault();
   
-  decryptOne = decryptBase(append_base.value, user_key.value);
+  let decryptOne = decryptBase(append_base.value, user_key.value);
+  let space = `
+  `;
+  
+  return LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decryptOne + space + append_base.value));
 });
