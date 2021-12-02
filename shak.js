@@ -1,4 +1,6 @@
 const user_key = document.getElementById("a-key");
+const read_base = document.getElementById("read-base");
+const append_base = document.getElementById("append-base");
 
 function encryptBase (base, key) {
   let preset_key = key;
