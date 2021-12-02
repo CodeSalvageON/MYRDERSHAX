@@ -37,5 +37,9 @@ function decryptBase (base, key) {
     preset_base = "";
   }
   
+  let compressed_key = LZString.compress(preset_key);
   
+  alert(preset_base.split(compressed_key));
 }
+
+alert(encryptBase("test", "lol"));
