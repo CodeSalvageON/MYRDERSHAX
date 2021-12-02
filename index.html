@@ -8,16 +8,16 @@
   <BODY>
     <CENTER>
       <H3>MYRDERSHAX</H3>
-      <I>Access Key (Leave blank if base is public): <input id="a-key" type="text"/></I>
+      <I>Access Key (Leave blank if base is public): <input id="a-key" type="text" autocomplete="off"/></I>
     </CENTER>
     <H3 align="left"><I>Read MYRDERSHAK BELOW</I></H3>
-    <FORM id="read-only">
+    <FORM id="read-only" autocomplete="off">
       <H3>Paste MYRDERSHAK base.</H3>
       <TEXTAREA id="read-base" cols="50" rows="5"></TEXTAREA>
       <br/>
       <button>Complete read</button>
     </FORM>
-    <FORM id="append-only" align="right">
+    <FORM id="append-only" align="right" autocomplete="off">
       <H3 align="left"><I>Append MYRDERSHAK BELOW</I></H3>
       <H3>Write contents to append to base.</H3>
       <TEXTAREA id="append-base" cols="50" rows="5"></TEXTAREA>
@@ -25,7 +25,7 @@
       <button>Complete append</button>
     </FORM>
     <H3 align="left">Create a MYRDERSHAK</H3>
-    <FORM id="create-shak" align="left">
+    <FORM id="create-shak" align="left" autocomplete="off">
       <H3>MYRDERSHAK name: <input id="shak-name" type="text" required/></H3>
       <H3>Set Key (Leave blank if MYRDERSHAK is to be public): <input id="key-name" type="text"/></H3> 
       <button>Create</button>
