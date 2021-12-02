@@ -18,11 +18,7 @@ function encryptBase (base, key) {
   
   let encrypted_base = "";
   
-  for (i=0; i < encrypted_base.length; i++) {
-    encrypted_base += encrypted_base[i] + compressed_key;
-  }
-  
-  return encrypted_base;
+  return compressed_key + "--key--" +  compressed_base;
 }
 
 function decryptBase (base, key) {
@@ -36,10 +32,4 @@ function decryptBase (base, key) {
   if (base === null || base === undefined || base === "") {
     preset_base = "";
   }
-  
-  let compressed_key = LZString.compress(preset_key);
-  
-  alert(preset_base.split(compressed_key));
 }
-
-alert(encryptBase("test", "lol"));
