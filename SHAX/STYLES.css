@@ -3,3 +3,9 @@ body {
   font-family: monospace;
   background-color: black;
 }
+
+#read-base {
+  color: limegreen;
+  background-color: black;
+  border: 1px solid limegreen;
+}
