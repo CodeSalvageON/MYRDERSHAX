@@ -59,5 +59,5 @@ $("append-only").submit(function () {
   let space = `
   `;
   
-  return LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decryptOne + space + append_base.value));
+  new_shak.innerText = LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decryptOne + space + append_base.value));
 });
