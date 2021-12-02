@@ -4,7 +4,7 @@ body {
   background-color: black;
 }
 
-#read-base {
+#read-base, #append-base {
   color: limegreen;
   background-color: black;
   border: 1px solid limegreen;
