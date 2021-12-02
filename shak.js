@@ -1,6 +1,7 @@
 const user_key = document.getElementById("a-key");
 const read_base = document.getElementById("read-base");
 const append_base = document.getElementById("append-base");
+const new_shak = document.getElementById("new-shak");
 
 function encryptBase (base, key) {
   let preset_key = key;
@@ -44,3 +45,15 @@ function decryptBase (base, key) {
   
   return LZString.decompress(decrypt_4);
 }
+
+$("#read-only").submit(function () {
+  event.preventDefault();
+  
+  new_shak.innerText = decryptBase(read_base.value, user_key.value);
+});
+
+$("append-only").submit(function () {
+  event.preventDefault();
+  
+  decryptOne = decryptBase(append_base.value, user_key.value);
+});
