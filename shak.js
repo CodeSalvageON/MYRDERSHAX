@@ -28,7 +28,7 @@ function encryptBase (base, key) {
   
   let encrypted_key = "";
   
-  encrypted_key = preset_base + "-KEY-&8" + user_key.value;
+  encrypted_key = preset_base + "-KEY-&8" + preset_key;
   
   const final_encrypt = btoa(encrypted_key);
   return final_encrypt;
