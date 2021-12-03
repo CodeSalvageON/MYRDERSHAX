@@ -66,7 +66,7 @@ $("#append-only").submit(function () {
   const decrypt_1 = decryptBase(og_base.value, user_key.value);
   const decrypt_2 = encryptBase(space + append_base.value, user_key.value);
   
-  append_shak.value = encryptBase(decrypt_1, user_key.value) + decrypt_2;
+  append_shak.value = encryptBase(decrypt_1 + space + append_base.value, user_key.value);
 });
 
 $("#create-shak").submit(function () {
