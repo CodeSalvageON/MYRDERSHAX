@@ -32,7 +32,7 @@ function encryptBase (base, key) {
     encrypted_key += preset_base[i] + string_key;
   }
   
-  const final_encrypt = LZString.compress(encrypted_key);
+  const final_encrypt = btoa(encrypted_key);
   return final_encrypt;
 }
 
@@ -48,8 +48,10 @@ function decryptBase (base, key) {
     preset_base = "";
   }
   
-  const de1 = LZString.decompress(read_base.value);
-  alert(de1);
+  const de1 = atob(read_base.value);
+  const de2 = de1.replace("KEY*()=-" + user_key.value, "");
+  
+  return de2;
 }
 
 $("#read-only").submit(function () {
@@ -80,5 +82,5 @@ $("#create-shak").submit(function () {
   
   let space = "--space--";
   
-  new_shak.value = encryptBase(shak_name.value + space, key_name.value);
+  new_shak.value = encryptBase(shak_name.value + space, "KEY*()=-" + key_name.value);
 });
