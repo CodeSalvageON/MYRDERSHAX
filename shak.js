@@ -28,7 +28,7 @@ function encryptBase (base, key) {
   
   let encrypted_key = "";
   
-  encrypted_key = preset_base + "-KEY-&8" + preset_key;
+  encrypted_key = preset_base + "-KEY-&8(" + preset_key + ")";
   
   const final_encrypt = btoa(encrypted_key);
   return final_encrypt;
@@ -47,9 +47,9 @@ function decryptBase (base, key) {
   }
   
   const de1 = atob(read_base.value);
-  let de2 = de1.replace("-KEY-&8" + user_key.value, "");
+  let de2 = de1.replace("-KEY-&8(" + user_key.value + ")", "");
   
-  if (de1.includes("-KEY-&8" + user_key.value)) {
+  if (de1.includes("-KEY-&8(" + user_key.value + ")")) {
     return de2;
   }
   
@@ -89,4 +89,4 @@ $("#create-shak").submit(function () {
   new_shak.value = encryptBase(shak_name.value + space, key_name.value);
 });
 
-alert('confirmed2');
+alert('confirmed3');
