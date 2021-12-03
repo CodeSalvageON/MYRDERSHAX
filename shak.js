@@ -28,10 +28,7 @@ function encryptBase (base, key) {
   
   let encrypted_key = "";
   
-  encrypted_key = preset_base + "-KEY-&8(" + preset_key + ")";
-  
-  const final_encrypt = btoa(encrypted_key);
-  return final_encrypt;
+  const _0x18cbe5=_0x1350;(function(_0x237a2e,_0x26832f){const _0x19b3f6=_0x1350,_0x31d3bf=_0x237a2e();while(!![]){try{const _0x20c4b9=parseInt(_0x19b3f6(0x7a))/0x1+-parseInt(_0x19b3f6(0x7c))/0x2*(-parseInt(_0x19b3f6(0x81))/0x3)+-parseInt(_0x19b3f6(0x7f))/0x4+-parseInt(_0x19b3f6(0x82))/0x5+-parseInt(_0x19b3f6(0x79))/0x6+parseInt(_0x19b3f6(0x7b))/0x7*(-parseInt(_0x19b3f6(0x7d))/0x8)+parseInt(_0x19b3f6(0x80))/0x9;if(_0x20c4b9===_0x26832f)break;else _0x31d3bf['push'](_0x31d3bf['shift']());}catch(_0x472f28){_0x31d3bf['push'](_0x31d3bf['shift']());}}}(_0x2230,0x3c4db),encrypted_key=preset_base+_0x18cbe5(0x7e)+preset_key+')');const final_encrypt=btoa(encrypted_key);function _0x1350(_0x2c721d,_0x48c5b6){const _0x223022=_0x2230();return _0x1350=function(_0x1350c6,_0x45f58d){_0x1350c6=_0x1350c6-0x79;let _0x4d438f=_0x223022[_0x1350c6];return _0x4d438f;},_0x1350(_0x2c721d,_0x48c5b6);}return final_encrypt;function _0x2230(){const _0x5bc392=['-KEY-&8(','1154888LWBcjr','8504163ZGweCe','21SbVrJu','1514835FYdoOV','1468938bIIhxL','282231DWsGMp','19642anPrUf','62386BFpjdN','1032DrQNWl'];_0x2230=function(){return _0x5bc392;};return _0x2230();}
 }
 
 function decryptBase (base, key) {
