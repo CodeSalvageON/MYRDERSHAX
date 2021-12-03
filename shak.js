@@ -29,7 +29,7 @@ function encryptBase (base, key) {
   let encrypted_key = "";
   
   for (i = 0; i < preset_base.length; i++) {
-    encrypted_key += preset_base[i] + string_key;
+    encrypted_key += preset_base[i] + string_key + "-KEY-&8";
   }
   
   const final_encrypt = btoa(encrypted_key);
@@ -49,7 +49,7 @@ function decryptBase (base, key) {
   }
   
   const de1 = atob(read_base.value);
-  const de2 = de1.replace("KEY*()=-" + user_key.value, "");
+  const de2 = de1.replace(user_key.value + "-KEY-&8", "");
   
   return de2;
 }
