@@ -6,6 +6,7 @@ const shak_name = document.getElementById("shak-name");
 const key_name = document.getElementById("key-name");
 const og_base = document.getElementById("og-base");
 const done_read = document.getElementById("done-read");
+const append_shak = document.getElementById("append-shak");
 
 function encryptBase (base, key) {
   let preset_key = key;
@@ -48,17 +49,19 @@ function decryptBase (base, key) {
 $("#read-only").submit(function () {
   event.preventDefault();
   
-  done_read.innerText = decryptBase(read_base.value, user_key.value);
+  done_read.value = decryptBase(read_base.value, user_key.value);
 });
 
 $("#append-only").submit(function () {
   event.preventDefault();
   
-  const decrypt_1 = decryptBase(og_base.value, user_key.value);
   let space = `
   `;
   
-  new_shak.innerText = LZString.compress(LZString.compress(user_key.value) + LZString.compress("--key--") + LZString.compress(decrypt_1 + space + append_base.value));
+  const decrypt_1 = decryptBase(og_base.value, user_key.value);
+  const decrypt_2 = encryptBase(space + append_base.value, user_key.value);
+  
+  append_shak.value = encryptBase(decrypt_1, user_key.value) + decrypt_2;
 });
 
 $("#create-shak").submit(function () {
@@ -67,5 +70,5 @@ $("#create-shak").submit(function () {
   let space = `
   `;
   
-  new_shak.innerText = encryptBase(shak_name.value + space, "");
+  new_shak.value = encryptBase(shak_name.value + space, "");
 });
