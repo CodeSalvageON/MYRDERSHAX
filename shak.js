@@ -50,7 +50,7 @@ $("#read-only").submit(function () {
   event.preventDefault();
   
   done_read.value = decryptBase(read_base.value, user_key.value);
-}
+});
 
 $("#read-only").submit(function () {
   event.preventDefault();
