@@ -44,9 +44,7 @@ function decryptBase (base, key) {
   }
   
   const de1 = LZString.decompress(read_base);
-  const de2 = de1.replace(user_key.value, "");
-  
-  return de2;
+  alert(de1);
 }
 
 $("#read-only").submit(function () {
