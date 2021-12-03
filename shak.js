@@ -43,7 +43,7 @@ function decryptBase (base, key) {
     preset_base = "";
   }
   
-  const de1 = LZString.decompress(read_base);
+  const de1 = LZString.decompress(read_base.value);
   alert(de1);
 }
 
