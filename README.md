@@ -16,7 +16,7 @@ Stuff for encryption to do whatever you want
   <li>Press Complete Read.</li>
   <li>The result should be in the small textbox.</li>
 </ol>
-# How to append a MYRDERSHAK base
+#  How to append a MYRDERSHAK base
 <ol>
   <li>Scroll to where it says to append a MYRDERSHAK base.</li>
   <li>Paste an encrypted MYRDERSHAK base string into the top textbox.</li>
@@ -25,7 +25,7 @@ Stuff for encryption to do whatever you want
   <li>Press Complete Apppend.</li>
   <li>The result will be in the small textbox.</li>
 </ol>
-# Errors and bugs
+#  Errors and bugs
 This thing was lazily made so don't expect it to be 100% perfect.
 <br/>
 Avoid using commas, quotes, skinny quotes, etc.
