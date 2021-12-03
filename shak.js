@@ -13,7 +13,7 @@ function encryptBase (base, key) {
   let preset_base = base;
   
   if (key === null || key === undefined || key === "") {
-    preset_key = "";
+    preset_key = "public";
   }
   
   if (base === null || base === undefined || base === "") {
