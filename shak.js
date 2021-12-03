@@ -67,7 +67,7 @@ $("#read-only").submit(function () {
 $("#append-only").submit(function () {
   event.preventDefault();
   
-  let space = "||";
+  let space = "--space--";
   
   const decrypt_1 = decryptBase(og_base.value, user_key.value);
   const decrypt_2 = encryptBase(space + append_base.value, user_key.value);
@@ -78,7 +78,7 @@ $("#append-only").submit(function () {
 $("#create-shak").submit(function () {
   event.preventDefault();
   
-  let space = "||";
+  let space = "--space--";
   
   new_shak.value = encryptBase(shak_name.value + space, key_name.value);
 });
