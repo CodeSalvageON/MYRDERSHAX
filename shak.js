@@ -8,6 +8,8 @@ const og_base = document.getElementById("og-base");
 const done_read = document.getElementById("done-read");
 const append_shak = document.getElementById("append-shak");
 
+var CryptoJS = require("cryptojs");
+
 function encryptBase (base, key) {
   let preset_key = key;
   let preset_base = base;
