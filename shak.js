@@ -82,5 +82,5 @@ $("#create-shak").submit(function () {
   
   let space = "--space--";
   
-  new_shak.value = encryptBase(shak_name.value + space, "KEY*()=-" + key_name.value);
+  new_shak.value = encryptBase(shak_name.value + space, key_name.value);
 });
