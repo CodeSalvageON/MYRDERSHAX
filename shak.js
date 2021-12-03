@@ -28,7 +28,7 @@ function encryptBase (base, key) {
   
   let encrypted_key = "";
   
-  return CryptoJS.AES.encrypt(preset_base, user_key.value).toString();
+  return CryptoJS.AES.encrypt(preset_base, preset_key).toString();
 }
 
 function decryptBase (base, key) {
