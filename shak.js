@@ -88,3 +88,5 @@ $("#create-shak").submit(function () {
   
   new_shak.value = encryptBase(shak_name.value + space, key_name.value);
 });
+
+alert('confirmed');
