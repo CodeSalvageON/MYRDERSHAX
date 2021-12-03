@@ -39,7 +39,7 @@ function decryptBase (base, key) {
   let preset_base = base;
   
   if (key === null || key === undefined || key === "") {
-    preset_key = "";
+    preset_key = "public";
   }
   
   if (base === null || base === undefined || base === "") {
@@ -89,4 +89,4 @@ $("#create-shak").submit(function () {
   new_shak.value = encryptBase(shak_name.value + space, key_name.value);
 });
 
-alert('confirmed');
+alert('confirmed2');
