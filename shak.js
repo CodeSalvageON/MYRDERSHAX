@@ -70,5 +70,5 @@ $("#create-shak").submit(function () {
   let space = `
   `;
   
-  new_shak.value = encryptBase(shak_name.value + space, "");
+  new_shak.value = encryptBase(shak_name.value + space, user_key.value);
 });
