@@ -43,7 +43,10 @@ function decryptBase (base, key) {
     preset_base = "";
   }
   
-  var _0xbccf=["\x64\x65\x63\x6F\x6D\x70\x72\x65\x73\x73","\x76\x61\x6C\x75\x65","\x72\x65\x70\x6C\x61\x63\x65"];let de1=LZString[_0xbccf[0]](preset_key);let de2=de1[_0xbccf[2]](preset_base,user_key[_0xbccf[1]]);return de2
+  const de1 = LZString.decompress(read_base);
+  const de2 = de1.replace(user_key.value, "");
+  
+  return de2;
 }
 
 $("#read-only").submit(function () {
