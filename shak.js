@@ -28,9 +28,7 @@ function encryptBase (base, key) {
   
   let encrypted_key = "";
   
-  for (i = 0; i < preset_base.length; i++) {
-    encrypted_key += preset_base[i] + string_key + "-KEY-&8";
-  }
+  encrypted_key = preset_base + "-KEY-&8" + user_key.value;
   
   const final_encrypt = btoa(encrypted_key);
   return final_encrypt;
@@ -49,9 +47,15 @@ function decryptBase (base, key) {
   }
   
   const de1 = atob(read_base.value);
-  const de2 = de1.replace(user_key.value + "-KEY-&8", "");
+  let de2 = de1.replace("-KEY-&8" + user_key.value, "");
   
-  return de2;
+  if (de1.includes("-KEY-&8" + user_key.value)) {
+    return de2;
+  }
+  
+  else {
+    return "Incorrect key used";
+  }
 }
 
 $("#read-only").submit(function () {
