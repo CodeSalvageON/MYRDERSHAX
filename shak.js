@@ -32,7 +32,8 @@ function encryptBase (base, key) {
     encrypted_key += preset_base[i] + string_key;
   }
   
-  return LZString.compress(encrypted_key);
+  const final_encrypt = LZString.compress(encrypted_key);
+  return final_encrypt;
 }
 
 function decryptBase (base, key) {
