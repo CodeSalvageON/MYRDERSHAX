@@ -43,7 +43,7 @@ function decryptBase (base, key) {
     preset_base = "";
   }
   
-  return CryptoJS.AES.decrypt(preset_base, user_key.value).toString();
+  return CryptoJS.AES.decrypt(preset_base, preset_key).toString();
 }
 
 $("#read-only").submit(function () {
